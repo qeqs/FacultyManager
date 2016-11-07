@@ -9,4 +9,5 @@
             <many-to-many column="student_id" class="manager.entities.Subject"/>
         </set>
     </class>
+    
 </hibernate-mapping>
