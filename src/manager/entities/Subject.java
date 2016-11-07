@@ -1,11 +1,15 @@
 package manager.entities;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Created by Milonyash on 07.11.2016.
  */
 public class Subject {
     private Long subj_id;
     private String name;
+    private Set students = new HashSet();
     public Subject(){
 
     }
@@ -21,4 +25,11 @@ public class Subject {
     public String getName(){
         return name;
     }
+    public void setSubjects(Set students) {
+        this.students = students;
+    }
+    public Set getStudents(){
+        return students;
+    }
+
 }
