@@ -20,6 +20,13 @@
         <property column="name" name="name" type="java.lang.String"/>
         <property column="middle_name" name="middle_name" type="java.lang.String"/>
         <property column="bithday" name="bithday" type="java.lang.String"/>
+        <property column="address" name="address" type="java.lang.String"/>
+        <property column="is_leader" name="is_leader" type="java.lang.String"/>
+
+        <set name="subjects" table="student_subjects" lazy="false">
+        <key column="student_id"/>
+        <many-to-many column="subj_id" class="manager.entities.Subject"/>
+    </set>
 
 </class>
         </hibernate-mapping>

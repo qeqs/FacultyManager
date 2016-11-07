@@ -1,0 +1,12 @@
+<hibernate-mapping>
+    <class name= "manager.entities.Subject" table="subject">
+        <id column= "subj_id" name="subj_id" type="java.lang.Long">
+            <generator class="increment"/>
+        </id>
+        <property column="name" name="name" type="java.lang.String"/>
+        <set name="students" table="student_subjects" lazy="false">
+            <key column="subj_id"/>
+            <many-to-many column="student_id" class="manager.entities.Subject"/>
+        </set>
+    </class>
+</hibernate-mapping>
