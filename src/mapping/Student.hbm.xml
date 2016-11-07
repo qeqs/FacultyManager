@@ -1,0 +1,25 @@
+<hibernate-mapping>
+    <class name= "manager.entities.Student" table="student">
+
+        <id column= "student_id" name="student_id" type="java.lang.Long">
+         <generator class="increment"/>
+        </id>
+
+        <id column="group_id" name="group_id" type="java.lang.Long">
+        <generator class="increment"/>
+         </id>
+
+        <id column="course_id" name="course_id" type="java.lang.Long">
+            <generator class="increment"/>
+        </id>
+
+        <id column="elective_id" name="elective_id" type="java.lang.Long">
+            <generator class="increment"/>
+        </id>
+        <property column="surname" name="surname" type="java.lang.String"/>
+        <property column="name" name="name" type="java.lang.String"/>
+        <property column="middle_name" name="middle_name" type="java.lang.String"/>
+        <property column="bithday" name="bithday" type="java.lang.String"/>
+
+</class>
+        </hibernate-mapping>

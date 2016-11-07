@@ -5,7 +5,7 @@ import java.util.Set;
 import java.util.HashSet;
 
 /**
- * Created by ПК on 07.11.2016.
+ * Created by Milonyash on 07.11.2016.
  */
 public class Student {
     private Long student_id;
