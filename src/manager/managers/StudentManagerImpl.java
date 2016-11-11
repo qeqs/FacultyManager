@@ -27,7 +27,7 @@ public class StudentManagerImpl implements StudentManager{
 	}
 
 	@Override
-	public void updateStudent(Long student_id, Student student) throws SQLException {
+	public void updateStudent(Student student) throws SQLException {
         ManagersFactory.getInstance().beginSession();
         session.update(student);
 	}
@@ -51,10 +51,9 @@ public class StudentManagerImpl implements StudentManager{
 	@Override
 	public Collection getStudentBySubject(Subject subject) throws SQLException {
         long subject_id = subject.getSubj_id();
-        Query query = session.createQuery( "from student where subject_id = :subj_id"
-               /* " select s "
-                        + " from student s INNER JOIN s.subjects subject"
-                        + " where subject.id = :subj_id "*/
+        Query query = session.createQuery(
+				"select s from student s inner join student_subjects ss on " +
+				"s.student_id = ss.student_id and ss.subj_id =:subj_id"
         )
                 .setLong("subj_id",subject_id);
 		return query.list();

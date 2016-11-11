@@ -12,7 +12,7 @@ import java.util.Collection;
 public interface SubjectManager {
 
 	public void addSubject(Subject subject) throws SQLException;
-	public void updateSubject(Long subject_id, Subject subject) throws SQLException;
+	public void updateSubject( Subject subject) throws SQLException;
 	public Subject getSubjectById(Long subject_id) throws SQLException;
 	public Collection getAllSubjects() throws SQLException;
 	public void deleteSubject(Subject subject) throws SQLException;

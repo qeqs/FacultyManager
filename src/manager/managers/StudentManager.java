@@ -11,7 +11,7 @@ import java.sql.SQLException;
 public interface StudentManager {
 
 	public void addStudent(Student student) throws SQLException;
-	public void updateStudent(Long student_id, Student student) throws SQLException;
+	public void updateStudent( Student student) throws SQLException;
 	public Student getStudentById(Long student_id) throws SQLException;
 	public Collection getAllStudents() throws SQLException;
 	public void deleteStudent(Student student) throws SQLException;
