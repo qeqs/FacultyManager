@@ -27,10 +27,10 @@ public class ManagersFactory {
         if(studentManager==null)studentManager=new StudentManagerImpl(session);
         return studentManager;
     }
-    public void Save(){
+    public void save(){
         session.getTransaction().commit();
     }
-    public void Rollback(){
+    public void rollback(){
         session.getTransaction().rollback();
     }
     public void beginSession(){

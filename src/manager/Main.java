@@ -1,11 +1,12 @@
 package manager;
 
+import manager.gui.MainFrame;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.SessionFactory;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        MainFrame frame = new MainFrame();
     }
 
 
