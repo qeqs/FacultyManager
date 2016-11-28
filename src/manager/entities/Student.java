@@ -92,4 +92,9 @@ public class Student {
     public Boolean setIs_leader() {
       return is_leader;
     }
+
+    @Override
+    public String toString(){
+        return getSurname()+" "+getName()+" "+getMiddle_name()+":"+getBithday()+"\n";
+    }
 }

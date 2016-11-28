@@ -4,7 +4,7 @@
         <property name="connection.url">jdbc:postgresql://127.0.0.1:5432//MyTable</property>
     <property name="connection.driver_class">org.postgresql.Driver</property>
 <property name="connection.username">postgres</property>
-<property name="connection.password"/>
+<property name="connection.password">milonyash</property>
 <property name="connection.pool_size">1</property>
 <property name="current_session_context_class">thread</property>
 <property name="show_sql">true</property>
