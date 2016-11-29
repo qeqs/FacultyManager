@@ -3,22 +3,22 @@
         "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name= "manager.entities.Student" table="student" >
+    <class  name= "Student" table="student" >
 
         <id column= "student_id" name="student_id" type="java.lang.Long">
-         <generator class="increment"/>
+         <generator class="sequence"/>
         </id>
 
         <id column="group_id" name="group_id" type="java.lang.Long">
-        <generator class="increment"/>
+        <generator class="sequence"/>
          </id>
 
         <id column="course_id" name="course_id" type="java.lang.Long">
-            <generator class="increment"/>
+            <generator class="sequence"/>
         </id>
 
         <id column="elective_id" name="elective_id" type="java.lang.Long">
-            <generator class="increment"/>
+            <generator class="sequence"/>
         </id>
         <property column="surname" name="surname" type="java.lang.String"/>
         <property column="name" name="name" type="java.lang.String"/>
