@@ -1,5 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name= "manager.entities.Student" table="student">
+    <class name= "manager.entities.Student" table="student" >
 
         <id column= "student_id" name="student_id" type="java.lang.Long">
          <generator class="increment"/>
@@ -27,6 +31,5 @@
         <key column="student_id"/>
         <many-to-many column="subj_id" class="manager.entities.Subject"/>
     </set>
-
 </class>
         </hibernate-mapping>
